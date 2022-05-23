@@ -9,9 +9,10 @@ import UIKit
 
 class StartVC: UIViewController {
     
-    let startGameButton = HTBDButton(backgroundColor: .systemCyan, title: "Start a new game")
-    let recordsButton = HTBDButton(backgroundColor: .systemOrange, title: "Records")
-    let titleLabel = HTBDLabel(text: "Welcome to the game - How to become Deutsch")
+    private let startGameButton = HTBDButton(backgroundColor: .systemCyan, title: "Start a new game")
+    private let recordsButton = HTBDButton(backgroundColor: .systemOrange, title: "Records")
+    private let titleLabel = HTBDLabel(text: "Welcome to the game - How to become Deutsch")
+    private let lastResultLabel = HTBDLabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +20,13 @@ class StartVC: UIViewController {
         configureTitleLabel()
         configureStartGameButton()
         configureRecordsButton()
+        configureLastResultLabel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+
     private func configureTitleLabel(){
         view.addSubview(titleLabel)
         
@@ -56,11 +62,36 @@ class StartVC: UIViewController {
         ])
     }
     
-    @objc func presentGameVC(){
-        navigationController?.pushViewController(GameVC(), animated: true)
+    private func configureLastResultLabel() {
+        view.addSubview(lastResultLabel)
+        
+        lastResultLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        lastResultLabel.text = "You have not played yet"
+        
+        NSLayoutConstraint.activate([
+            lastResultLabel.heightAnchor.constraint(equalToConstant: 50),
+            lastResultLabel.widthAnchor.constraint(equalToConstant: 250),
+            lastResultLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            lastResultLabel.topAnchor.constraint(equalTo: recordsButton.bottomAnchor, constant: 50)
+        ])
     }
     
-    @objc func pushRecordsVC() {
+    @objc
+    private func presentGameVC(){
+        let destVC = GameVC()
+        destVC.gameDelegate = self
+        navigationController?.pushViewController(destVC, animated: true)
+    }
+    
+    @objc
+    private func pushRecordsVC() {
         navigationController?.pushViewController(RecordsVC(), animated: true)
     }
+}
+
+extension StartVC: GameVCDelegate {
+    func didEndGame(with result: Int) {
+        lastResultLabel.text = "Last result is \(result)"
+    }
+    
 }

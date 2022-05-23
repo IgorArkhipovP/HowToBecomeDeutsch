@@ -40,33 +40,45 @@ extension GameVC {
         if let titleButtonLabel = sender.titleLabel?.text, titleButtonLabel == question.correctAnswer  {
             index += 1
             victoryPoint += 1
-            // sender.backgroundColor = .systemGreen
-            DispatchQueue.main.asyncAfter(deadline: .now() ) {
+            sender.backgroundColor = .systemYellow
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
+                sender.backgroundColor = .systemBackground
                 self.showQuestion()
                 self.showACCorrectAnswerButtonTapped()
             }
         } else {
             isGameOver = true
-            // sender.backgroundColor = .systemRed
-            DispatchQueue.main.asyncAfter(deadline: .now() ) { self.endOfTheGame() }
+            sender.backgroundColor = .systemYellow
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
+                sender.backgroundColor = .systemBackground
+                self.endOfTheGame()
+            }
         }
     }
     
     private func showACCorrectAnswerButtonTapped(){
-        let acCorrectAnswerButtonTapped = UIAlertController(title: "You are right", message: "Congratulations🥳, you are so smart!", preferredStyle: .alert)
+        let acCorrectAnswerButtonTapped = UIAlertController(title: "YOU ARE RIGHT!😇", message: "Congratulations🥳, you are so smart!", preferredStyle: .alert)
         acCorrectAnswerButtonTapped.addAction(UIAlertAction(title: "Ok", style: .default))
         present(acCorrectAnswerButtonTapped, animated: true)
     }
     
     private func endOfTheGame(){
         
+        gameDelegate?.didEndGame(with: victoryPoint)
+        
+        GameSingleton.shared.addRecord(record: Record(date: Date(), score: victoryPoint))
+        
         if victoryPoint == totalVictoryPoints {
             let victoryAC = UIAlertController(title: "You have won!", message: "You are the smartest person I have ever met 🥰", preferredStyle: .alert)
-            victoryAC.addAction(UIAlertAction(title: "Ok", style: .default))
+            victoryAC.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                self.navigationController?.popViewController(animated: true)
+            }))
             present(victoryAC, animated: true)
         } else {
-            let gameLoss = UIAlertController(title: "The end of the game", message: "You have lost! You could be smarter! 😱", preferredStyle: .alert)
-            gameLoss.addAction(UIAlertAction(title: "Ok", style: .default))
+            let gameLoss = UIAlertController(title: "YOU ARE WRONG!😡", message: "You have lost! You could be smarter! 😱", preferredStyle: .alert)
+            gameLoss.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                self.navigationController?.popViewController(animated: true)
+            }))
             present(gameLoss, animated: true)
         }
     }

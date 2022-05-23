@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol GameVCDelegate: AnyObject {
+    func didEndGame(with result: Int)
+}
+
 class GameVC: UIViewController {
     
     var index: Int = 0
@@ -16,6 +20,8 @@ class GameVC: UIViewController {
     let totalVictoryPoints = 7
     var victoryPoint = 0
     let scrollView = UIScrollView()
+    
+    weak var gameDelegate: GameVCDelegate?
     
     var answerOptionArray = [
         HTBDButton(),

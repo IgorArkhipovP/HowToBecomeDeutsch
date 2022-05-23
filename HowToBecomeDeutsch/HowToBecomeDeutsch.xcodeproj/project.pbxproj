@@ -11,14 +11,18 @@
 		412B990E283682850056F590 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B990D283682850056F590 /* QuestionModel.swift */; };
 		412B9910283684DA0056F590 /* GameVC+ConfigureUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B990F283684DA0056F590 /* GameVC+ConfigureUI.swift */; };
 		41638CF12836B761002C9245 /* GameVC+GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41638CF02836B761002C9245 /* GameVC+GameLogic.swift */; };
+		41638D162837A522002C9245 /* GameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41638D152837A522002C9245 /* GameSingleton.swift */; };
+		41638D172837C51C002C9245 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A91A9B283530CA00BEBE98 /* StartVC.swift */; };
 		41A91A8828352DC600BEBE98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A91A8728352DC600BEBE98 /* AppDelegate.swift */; };
 		41A91A8A28352DC600BEBE98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A91A8928352DC600BEBE98 /* SceneDelegate.swift */; };
 		41A91A9128352DC700BEBE98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41A91A9028352DC700BEBE98 /* Assets.xcassets */; };
 		41A91A9428352DC700BEBE98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41A91A9228352DC700BEBE98 /* LaunchScreen.storyboard */; };
-		41A91A9C283530CA00BEBE98 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A91A9B283530CA00BEBE98 /* StartVC.swift */; };
 		41A91A9E2835310900BEBE98 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A91A9D2835310900BEBE98 /* GameVC.swift */; };
 		41A91AA02835321C00BEBE98 /* RecordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A91A9F2835321C00BEBE98 /* RecordsVC.swift */; };
 		41A91AA32835351C00BEBE98 /* HTBDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A91AA22835351C00BEBE98 /* HTBDButton.swift */; };
+		41E863C3283B870800723CDA /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E863C2283B870800723CDA /* Records.swift */; };
+		41E863C6283B8B1B00723CDA /* RecordsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E863C5283B8B1B00723CDA /* RecordsTVC.swift */; };
+		41E863CC283BB05000723CDA /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E863CB283BB05000723CDA /* RecordsCaretaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,7 @@
 		412B990D283682850056F590 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		412B990F283684DA0056F590 /* GameVC+ConfigureUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameVC+ConfigureUI.swift"; sourceTree = "<group>"; };
 		41638CF02836B761002C9245 /* GameVC+GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameVC+GameLogic.swift"; sourceTree = "<group>"; };
+		41638D152837A522002C9245 /* GameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSingleton.swift; sourceTree = "<group>"; };
 		41A91A8428352DC600BEBE98 /* HowToBecomeDeutsch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowToBecomeDeutsch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A91A8728352DC600BEBE98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41A91A8928352DC600BEBE98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		41A91A9D2835310900BEBE98 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		41A91A9F2835321C00BEBE98 /* RecordsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsVC.swift; sourceTree = "<group>"; };
 		41A91AA22835351C00BEBE98 /* HTBDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTBDButton.swift; sourceTree = "<group>"; };
+		41E863C2283B870800723CDA /* Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
+		41E863C5283B8B1B00723CDA /* RecordsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTVC.swift; sourceTree = "<group>"; };
+		41E863CB283BB05000723CDA /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 		412B990B28367CD10056F590 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				41E863C4283B8ADE00723CDA /* Cells */,
 				41A91AA22835351C00BEBE98 /* HTBDButton.swift */,
 				412B990928367CCA0056F590 /* HTBDLabel.swift */,
 			);
@@ -62,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				412B990D283682850056F590 /* QuestionModel.swift */,
+				41E863C2283B870800723CDA /* Records.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -69,13 +79,19 @@
 		412B9912283684EE0056F590 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				412B990F283684DA0056F590 /* GameVC+ConfigureUI.swift */,
-				41638CF02836B761002C9245 /* GameVC+GameLogic.swift */,
-				41A91A9D2835310900BEBE98 /* GameVC.swift */,
 				41A91A9B283530CA00BEBE98 /* StartVC.swift */,
+				41A91A9D2835310900BEBE98 /* GameVC.swift */,
 				41A91A9F2835321C00BEBE98 /* RecordsVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		41638D142837A50D002C9245 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				41638D152837A522002C9245 /* GameSingleton.swift */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		41A91A7B28352DC600BEBE98 = {
@@ -97,6 +113,9 @@
 		41A91A8628352DC600BEBE98 /* HowToBecomeDeutsch */ = {
 			isa = PBXGroup;
 			children = (
+				41E863CA283BB03700723CDA /* Memento */,
+				41E863C7283BA21900723CDA /* Extentions */,
+				41638D142837A50D002C9245 /* Singleton */,
 				412B9912283684EE0056F590 /* Controllers */,
 				41A91AA12835346800BEBE98 /* Fundamentals */,
 				412B990B28367CD10056F590 /* Utilities */,
@@ -115,6 +134,31 @@
 				41A91A8928352DC600BEBE98 /* SceneDelegate.swift */,
 			);
 			path = Fundamentals;
+			sourceTree = "<group>";
+		};
+		41E863C4283B8ADE00723CDA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				41E863C5283B8B1B00723CDA /* RecordsTVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		41E863C7283BA21900723CDA /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				41638CF02836B761002C9245 /* GameVC+GameLogic.swift */,
+				412B990F283684DA0056F590 /* GameVC+ConfigureUI.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		41E863CA283BB03700723CDA /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+				41E863CB283BB05000723CDA /* RecordsCaretaker.swift */,
+			);
+			path = Memento;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,14 +232,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A91AA02835321C00BEBE98 /* RecordsVC.swift in Sources */,
+				41E863CC283BB05000723CDA /* RecordsCaretaker.swift in Sources */,
 				41A91A8828352DC600BEBE98 /* AppDelegate.swift in Sources */,
+				41638D162837A522002C9245 /* GameSingleton.swift in Sources */,
 				412B990A28367CCA0056F590 /* HTBDLabel.swift in Sources */,
 				41638CF12836B761002C9245 /* GameVC+GameLogic.swift in Sources */,
 				41A91A8A28352DC600BEBE98 /* SceneDelegate.swift in Sources */,
+				41E863C3283B870800723CDA /* Records.swift in Sources */,
 				412B9910283684DA0056F590 /* GameVC+ConfigureUI.swift in Sources */,
 				41A91A9E2835310900BEBE98 /* GameVC.swift in Sources */,
-				41A91A9C283530CA00BEBE98 /* StartVC.swift in Sources */,
+				41638D172837C51C002C9245 /* StartVC.swift in Sources */,
 				41A91AA32835351C00BEBE98 /* HTBDButton.swift in Sources */,
+				41E863C6283B8B1B00723CDA /* RecordsTVC.swift in Sources */,
 				412B990E283682850056F590 /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
