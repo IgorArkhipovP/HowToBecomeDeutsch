@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  HowToBecomeDeutsch
+//  HowToBecomeRich
 //
-//  Created by Игорь  Архипов on 19.05.2022.
+//  Created by Игорь  Архипов on 18.05.2022.
 //
 
 import UIKit
