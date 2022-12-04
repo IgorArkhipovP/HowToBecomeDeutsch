@@ -26,20 +26,20 @@ extension GameVC {
         
         for i in answerOptionArray.indices {
             answerOptionArray[i].setTitle(question.answerOptions[i], for: .normal)
-            answerOptionArray[i].addTarget(self, action: #selector(didTapButtonAnswer(sender:)), for: .touchUpInside)
+            answerOptionArray[i].addTarget(self, action: #selector(didTapButtonAnswer(sender: )), for: .touchUpInside)
         }
     }
     
     @objc func didTapButtonAnswer(sender: HTBDButton){
-        if isGameOver {
-            return
-        }
-        
+       if isGameOver {
+           return
+       }
+
         let question = questions[index]
         
         if let titleButtonLabel = sender.titleLabel?.text, titleButtonLabel == question.correctAnswer  {
             index += 1
-            victoryPoint += 1
+            victoryPoint.value += 1
             sender.backgroundColor = .systemYellow
             DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
                 sender.backgroundColor = .systemBackground
@@ -64,11 +64,11 @@ extension GameVC {
     
     private func endOfTheGame(){
         
-        gameDelegate?.didEndGame(with: victoryPoint)
+        gameDelegate?.didEndGame(with: victoryPoint.value)
         
-        GameSingleton.shared.addRecord(record: Record(date: Date(), score: victoryPoint))
+        GameSingleton.shared.addRecord(record: Record(date: Date(), score: victoryPoint.value))
         
-        if victoryPoint == totalVictoryPoints {
+        if victoryPoint.value == totalVictoryPoints {
             let victoryAC = UIAlertController(title: "You have won!", message: "You are the smartest person I have ever met 🥰", preferredStyle: .alert)
             victoryAC.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
                 self.navigationController?.popViewController(animated: true)

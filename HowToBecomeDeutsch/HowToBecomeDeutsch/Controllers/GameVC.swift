@@ -15,11 +15,15 @@ class GameVC: UIViewController {
     
     var index: Int = 0
     var questionLabel = HTBDLabel()
-    let questions: [Question] = getQuestions()
+    var currentResultLabel = HTBDLabel()
+    var presentageOfRightAnswersLabel = HTBDLabel()
+    var questions: [Question]
     var isGameOver: Bool = false
-    let totalVictoryPoints = 7
-    var victoryPoint = 0
-    let scrollView = UIScrollView()
+    var totalVictoryPoints = 0
+    var victoryPoint = Observable<Int>(0)
+    var sequence: Sequence = .consistently
+    let sequenceStrategy: SequenceStrategy
+    var scrollView = UIScrollView()
     
     weak var gameDelegate: GameVCDelegate?
     
@@ -30,9 +34,26 @@ class GameVC: UIViewController {
         HTBDButton()
     ]
     
+    init(sequenceStrategy: SequenceStrategy ) {
+        self.sequenceStrategy = sequenceStrategy
+        questions = sequenceStrategy.getQuestion()
+        totalVictoryPoints = sequenceStrategy.getQuestion().count
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDesignGameVC()
         gameLogic()
+        
+        victoryPoint.addObserver(self, options: [.new, .initial]) { [weak self] (victoryPoint, _) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
+            self?.currentResultLabel.text = "Your current result is \(victoryPoint) from 7 points."
+            }
+        }
     }
 }

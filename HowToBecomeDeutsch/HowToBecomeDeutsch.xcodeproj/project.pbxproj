@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4102F338283F800500516DCD /* HTBDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4102F337283F800500516DCD /* HTBDTextField.swift */; };
+		4102F33A283F818900516DCD /* SetUpNewQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4102F339283F818900516DCD /* SetUpNewQuestionVC.swift */; };
+		4102F33E283F903800516DCD /* QuestionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4102F33D283F903800516DCD /* QuestionBuilder.swift */; };
+		41200D43283E29EF0072C064 /* ObservableOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41200D42283E29EF0072C064 /* ObservableOptions.swift */; };
 		412B990A28367CCA0056F590 /* HTBDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B990928367CCA0056F590 /* HTBDLabel.swift */; };
 		412B990E283682850056F590 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B990D283682850056F590 /* QuestionModel.swift */; };
 		412B9910283684DA0056F590 /* GameVC+ConfigureUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B990F283684DA0056F590 /* GameVC+ConfigureUI.swift */; };
@@ -23,9 +27,17 @@
 		41E863C3283B870800723CDA /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E863C2283B870800723CDA /* Records.swift */; };
 		41E863C6283B8B1B00723CDA /* RecordsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E863C5283B8B1B00723CDA /* RecordsTVC.swift */; };
 		41E863CC283BB05000723CDA /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E863CB283BB05000723CDA /* RecordsCaretaker.swift */; };
+		41FB0C58283CD3D1002CE80B /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB0C57283CD3D1002CE80B /* Sequence.swift */; };
+		41FB0C5C283CD9C5002CE80B /* SequenceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB0C5B283CD9C5002CE80B /* SequenceStrategy.swift */; };
+		41FB0C5E283CD9F2002CE80B /* ConsistenceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB0C5D283CD9F2002CE80B /* ConsistenceStrategy.swift */; };
+		41FB0C60283CDA00002CE80B /* RandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB0C5F283CDA00002CE80B /* RandomStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4102F337283F800500516DCD /* HTBDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTBDTextField.swift; sourceTree = "<group>"; };
+		4102F339283F818900516DCD /* SetUpNewQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpNewQuestionVC.swift; sourceTree = "<group>"; };
+		4102F33D283F903800516DCD /* QuestionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBuilder.swift; sourceTree = "<group>"; };
+		41200D42283E29EF0072C064 /* ObservableOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableOptions.swift; sourceTree = "<group>"; };
 		412B990928367CCA0056F590 /* HTBDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTBDLabel.swift; sourceTree = "<group>"; };
 		412B990D283682850056F590 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		412B990F283684DA0056F590 /* GameVC+ConfigureUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameVC+ConfigureUI.swift"; sourceTree = "<group>"; };
@@ -44,6 +56,10 @@
 		41E863C2283B870800723CDA /* Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
 		41E863C5283B8B1B00723CDA /* RecordsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTVC.swift; sourceTree = "<group>"; };
 		41E863CB283BB05000723CDA /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
+		41FB0C57283CD3D1002CE80B /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		41FB0C5B283CD9C5002CE80B /* SequenceStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceStrategy.swift; sourceTree = "<group>"; };
+		41FB0C5D283CD9F2002CE80B /* ConsistenceStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsistenceStrategy.swift; sourceTree = "<group>"; };
+		41FB0C5F283CDA00002CE80B /* RandomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +73,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4102F33C283F902600516DCD /* QuestionBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				4102F33D283F903800516DCD /* QuestionBuilder.swift */,
+			);
+			path = QuestionBuilder;
+			sourceTree = "<group>";
+		};
+		41200D41283E29D50072C064 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				41200D42283E29EF0072C064 /* ObservableOptions.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
 		412B990B28367CD10056F590 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				41E863C4283B8ADE00723CDA /* Cells */,
 				41A91AA22835351C00BEBE98 /* HTBDButton.swift */,
+				4102F337283F800500516DCD /* HTBDTextField.swift */,
 				412B990928367CCA0056F590 /* HTBDLabel.swift */,
 			);
 			path = Utilities;
@@ -81,7 +114,10 @@
 			children = (
 				41A91A9B283530CA00BEBE98 /* StartVC.swift */,
 				41A91A9D2835310900BEBE98 /* GameVC.swift */,
+				41638CF02836B761002C9245 /* GameVC+GameLogic.swift */,
+				412B990F283684DA0056F590 /* GameVC+ConfigureUI.swift */,
 				41A91A9F2835321C00BEBE98 /* RecordsVC.swift */,
+				4102F339283F818900516DCD /* SetUpNewQuestionVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,8 +149,10 @@
 		41A91A8628352DC600BEBE98 /* HowToBecomeDeutsch */ = {
 			isa = PBXGroup;
 			children = (
+				4102F33C283F902600516DCD /* QuestionBuilder */,
+				41200D41283E29D50072C064 /* Observable */,
+				41FB0C59283CD66F002CE80B /* Strategy */,
 				41E863CA283BB03700723CDA /* Memento */,
-				41E863C7283BA21900723CDA /* Extentions */,
 				41638D142837A50D002C9245 /* Singleton */,
 				412B9912283684EE0056F590 /* Controllers */,
 				41A91AA12835346800BEBE98 /* Fundamentals */,
@@ -123,6 +161,7 @@
 				41A91A9028352DC700BEBE98 /* Assets.xcassets */,
 				41A91A9228352DC700BEBE98 /* LaunchScreen.storyboard */,
 				41A91A9528352DC700BEBE98 /* Info.plist */,
+				41FB0C57283CD3D1002CE80B /* Sequence.swift */,
 			);
 			path = HowToBecomeDeutsch;
 			sourceTree = "<group>";
@@ -144,21 +183,30 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		41E863C7283BA21900723CDA /* Extentions */ = {
-			isa = PBXGroup;
-			children = (
-				41638CF02836B761002C9245 /* GameVC+GameLogic.swift */,
-				412B990F283684DA0056F590 /* GameVC+ConfigureUI.swift */,
-			);
-			path = Extentions;
-			sourceTree = "<group>";
-		};
 		41E863CA283BB03700723CDA /* Memento */ = {
 			isa = PBXGroup;
 			children = (
 				41E863CB283BB05000723CDA /* RecordsCaretaker.swift */,
 			);
 			path = Memento;
+			sourceTree = "<group>";
+		};
+		41FB0C59283CD66F002CE80B /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				41FB0C5A283CD677002CE80B /* SequenceQuestion */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		41FB0C5A283CD677002CE80B /* SequenceQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				41FB0C5B283CD9C5002CE80B /* SequenceStrategy.swift */,
+				41FB0C5D283CD9F2002CE80B /* ConsistenceStrategy.swift */,
+				41FB0C5F283CDA00002CE80B /* RandomStrategy.swift */,
+			);
+			path = SequenceQuestion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,17 +280,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A91AA02835321C00BEBE98 /* RecordsVC.swift in Sources */,
+				4102F338283F800500516DCD /* HTBDTextField.swift in Sources */,
 				41E863CC283BB05000723CDA /* RecordsCaretaker.swift in Sources */,
+				41FB0C58283CD3D1002CE80B /* Sequence.swift in Sources */,
+				41FB0C60283CDA00002CE80B /* RandomStrategy.swift in Sources */,
+				41200D43283E29EF0072C064 /* ObservableOptions.swift in Sources */,
 				41A91A8828352DC600BEBE98 /* AppDelegate.swift in Sources */,
 				41638D162837A522002C9245 /* GameSingleton.swift in Sources */,
 				412B990A28367CCA0056F590 /* HTBDLabel.swift in Sources */,
+				4102F33A283F818900516DCD /* SetUpNewQuestionVC.swift in Sources */,
+				41FB0C5E283CD9F2002CE80B /* ConsistenceStrategy.swift in Sources */,
 				41638CF12836B761002C9245 /* GameVC+GameLogic.swift in Sources */,
 				41A91A8A28352DC600BEBE98 /* SceneDelegate.swift in Sources */,
 				41E863C3283B870800723CDA /* Records.swift in Sources */,
 				412B9910283684DA0056F590 /* GameVC+ConfigureUI.swift in Sources */,
 				41A91A9E2835310900BEBE98 /* GameVC.swift in Sources */,
 				41638D172837C51C002C9245 /* StartVC.swift in Sources */,
+				4102F33E283F903800516DCD /* QuestionBuilder.swift in Sources */,
 				41A91AA32835351C00BEBE98 /* HTBDButton.swift in Sources */,
+				41FB0C5C283CD9C5002CE80B /* SequenceStrategy.swift in Sources */,
 				41E863C6283B8B1B00723CDA /* RecordsTVC.swift in Sources */,
 				412B990E283682850056F590 /* QuestionModel.swift in Sources */,
 			);

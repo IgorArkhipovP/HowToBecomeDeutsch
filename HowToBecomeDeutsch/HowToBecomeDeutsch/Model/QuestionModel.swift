@@ -13,7 +13,7 @@ struct Question {
     let correctAnswer: String
 }
 
-func getQuestions() -> [Question] {
+func fillOutQuestionArray() -> [Question] {
     var questions: [Question] = []
     
     questions.append(Question(questionTitle: "Übersetzen Sie bitte das englischen Wort (Eye)",
